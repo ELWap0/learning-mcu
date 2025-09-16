@@ -9,7 +9,7 @@ uint32_t freq = 4e6;
 void setup(){
   //enable gate
   RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
-  RCC->AHB2ENR |= RCC_APB2ENR_GPIOAEN;
+  RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
   RCC->CCIPR &= ~RCC_CCIPR_USART1SEL_Msk;
   RCC->CCIPR |= (0b01 << RCC_CCIPR_USART1SEL_Pos);
   //configure pin to use UART functionality
