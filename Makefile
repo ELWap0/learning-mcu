@@ -27,4 +27,4 @@ $(TARGET).elf : $(SOURCES)
 	$(CC) $^ $(CFLAGS) $(LDFLAGS) -o $@
 
 clean: 
-	rm -rf $(TARGET).elf $(TARGET).bin
+	rm -rf *.elf *.bin
