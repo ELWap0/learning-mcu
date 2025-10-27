@@ -1,6 +1,6 @@
-TARGET?=adc
+SRCDIR?=gpio
+TARGET=$(SRCDIR)
 STARTDIR=startup
-SRCDIR?=adc
 INCLUDES=include
 SOURCES=$(wildcard $(STARTDIR)/*.c) $(wildcard $(STARTDIR)/*.s) $(wildcard $(SRCDIR)/*.c)
 LINKSCR=$(STARTDIR)/stm32l433.ld
