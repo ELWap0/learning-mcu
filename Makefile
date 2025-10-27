@@ -1,9 +1,9 @@
-TARGET?=
+TARGET?=adc
 STARTDIR=startup
-SRCDIR?=
+SRCDIR?=adc
 INCLUDES=include
 SOURCES=$(wildcard $(STARTDIR)/*.c) $(wildcard $(STARTDIR)/*.s) $(wildcard $(SRCDIR)/*.c)
-LINKSCR=$(SRCDIR)/stm32l433.ld
+LINKSCR=$(STARTDIR)/stm32l433.ld
 CFLAGS=-W -Wall -Wextra -Werror -Wno-error=sign-conversion -Wundef -Wshadow -Wdouble-promotion \
             -Wformat-truncation -fno-common -Wconversion \
             -g3 -Os -ffreestanding -ffunction-sections -fdata-sections -I$(INCLUDES) \
